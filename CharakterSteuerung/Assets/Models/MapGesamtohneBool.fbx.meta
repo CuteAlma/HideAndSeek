@@ -1,0 +1,226 @@
+fileFormatVersion: 2
+guid: 4089f5b13ed7ff144ba8afaf7dffbfe2
+timeCreated: 1491467055
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Boole
+    100002: CINEMA_4D_Editor
+    100004: Flur
+    100006: Kommode
+    100008: //RootNode
+    100010: Raum
+    100012: Raum_1
+    100014: Raum_2
+    100016: Raum_3
+    100018: Raum_4
+    100020: Raum_5
+    100022: "R\xE4ume"
+    100024: Tisch
+    100026: WC
+    100028: "W\xFCrfel"
+    100030: "W\xFCrfel_1"
+    100032: "W\xFCrfel_2"
+    100034: "W\xFCrfel_3"
+    100036: "W\xFCrfel_4"
+    100038: "W\xFCrfel_8"
+    100040: "T\xFCr"
+    100042: "T\xFCr_1"
+    100044: "T\xFCr_2"
+    100046: "T\xFCr_3"
+    100048: "T\xFCr_4"
+    100050: "T\xFCr_5"
+    100052: "T\xFCr_6"
+    100054: "T\xFCren"
+    400000: Boole
+    400002: CINEMA_4D_Editor
+    400004: Flur
+    400006: Kommode
+    400008: //RootNode
+    400010: Raum
+    400012: Raum_1
+    400014: Raum_2
+    400016: Raum_3
+    400018: Raum_4
+    400020: Raum_5
+    400022: "R\xE4ume"
+    400024: Tisch
+    400026: WC
+    400028: "W\xFCrfel"
+    400030: "W\xFCrfel_1"
+    400032: "W\xFCrfel_2"
+    400034: "W\xFCrfel_3"
+    400036: "W\xFCrfel_4"
+    400038: "W\xFCrfel_8"
+    400040: "T\xFCr"
+    400042: "T\xFCr_1"
+    400044: "T\xFCr_2"
+    400046: "T\xFCr_3"
+    400048: "T\xFCr_4"
+    400050: "T\xFCr_5"
+    400052: "T\xFCr_6"
+    400054: "T\xFCren"
+    2300000: Flur
+    2300002: Kommode
+    2300004: Raum
+    2300006: Raum_1
+    2300008: Raum_2
+    2300010: Raum_3
+    2300012: Raum_4
+    2300014: Raum_5
+    2300016: Tisch
+    2300018: WC
+    2300020: "W\xFCrfel"
+    2300022: "W\xFCrfel_1"
+    2300024: "W\xFCrfel_2"
+    2300026: "W\xFCrfel_3"
+    2300028: "W\xFCrfel_4"
+    2300030: "W\xFCrfel_8"
+    2300032: "T\xFCr"
+    2300034: "T\xFCr_1"
+    2300036: "T\xFCr_2"
+    2300038: "T\xFCr_3"
+    2300040: "T\xFCr_4"
+    2300042: "T\xFCr_5"
+    2300044: "T\xFCr_6"
+    3300000: Flur
+    3300002: Kommode
+    3300004: Raum
+    3300006: Raum_1
+    3300008: Raum_2
+    3300010: Raum_3
+    3300012: Raum_4
+    3300014: Raum_5
+    3300016: Tisch
+    3300018: WC
+    3300020: "W\xFCrfel"
+    3300022: "W\xFCrfel_1"
+    3300024: "W\xFCrfel_2"
+    3300026: "W\xFCrfel_3"
+    3300028: "W\xFCrfel_4"
+    3300030: "W\xFCrfel_8"
+    3300032: "T\xFCr"
+    3300034: "T\xFCr_1"
+    3300036: "T\xFCr_2"
+    3300038: "T\xFCr_3"
+    3300040: "T\xFCr_4"
+    3300042: "T\xFCr_5"
+    3300044: "T\xFCr_6"
+    4300000: Flur
+    4300002: WC
+    4300004: Raum
+    4300006: Raum_1
+    4300008: Raum_2
+    4300010: Raum_3
+    4300012: Raum_4
+    4300014: Raum_5
+    4300016: Tisch
+    4300018: Kommode
+    4300020: "W\xFCrfel_8"
+    4300022: "W\xFCrfel"
+    4300024: "W\xFCrfel_1"
+    4300026: "W\xFCrfel_2"
+    4300028: "W\xFCrfel_3"
+    4300030: "W\xFCrfel_4"
+    4300032: "T\xFCr_5"
+    4300034: "T\xFCr_4"
+    4300036: "T\xFCr_3"
+    4300038: "T\xFCr_2"
+    4300040: "T\xFCr_1"
+    4300042: "T\xFCr"
+    4300044: "T\xFCr_6"
+    6400000: Flur
+    6400002: Kommode
+    6400004: Raum
+    6400006: Raum_1
+    6400008: Raum_2
+    6400010: Raum_3
+    6400012: Raum_4
+    6400014: Raum_5
+    6400016: Tisch
+    6400018: WC
+    6400020: "W\xFCrfel"
+    6400022: "W\xFCrfel_1"
+    6400024: "W\xFCrfel_2"
+    6400026: "W\xFCrfel_3"
+    6400028: "W\xFCrfel_4"
+    6400030: "W\xFCrfel_8"
+    6400032: "T\xFCr"
+    6400034: "T\xFCr_1"
+    6400036: "T\xFCr_2"
+    6400038: "T\xFCr_3"
+    6400040: "T\xFCr_4"
+    6400042: "T\xFCr_5"
+    6400044: "T\xFCr_6"
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
