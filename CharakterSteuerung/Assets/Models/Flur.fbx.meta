@@ -20,6 +20,13 @@ ModelImporter:
     100024: "T\xFCr_6"
     100026: "T\xFCren"
     100028: WC
+    100030: "T\xFCren_1"
+    100032: WC_1
+    100034: "W\xFCrfel"
+    100036: "W\xFCrfel_1"
+    100038: "W\xFCrfel_2"
+    100040: "W\xFCrfel_3"
+    100042: "W\xFCrfel_4"
     400000: CINEMA_4D_Editor
     400002: //RootNode
     400004: Flur
@@ -35,6 +42,13 @@ ModelImporter:
     400024: "T\xFCr_6"
     400026: "T\xFCren"
     400028: WC
+    400030: "T\xFCren_1"
+    400032: WC_1
+    400034: "W\xFCrfel"
+    400036: "W\xFCrfel_1"
+    400038: "W\xFCrfel_2"
+    400040: "W\xFCrfel_3"
+    400042: "W\xFCrfel_4"
     2300000: Flur
     2300002: Kommode
     2300004: Tisch
@@ -46,6 +60,13 @@ ModelImporter:
     2300016: "T\xFCr_5"
     2300018: "T\xFCr_6"
     2300020: WC
+    2300022: "T\xFCren_1"
+    2300024: WC_1
+    2300026: "W\xFCrfel"
+    2300028: "W\xFCrfel_1"
+    2300030: "W\xFCrfel_2"
+    2300032: "W\xFCrfel_3"
+    2300034: "W\xFCrfel_4"
     3300000: Flur
     3300002: Kommode
     3300004: Tisch
@@ -57,6 +78,13 @@ ModelImporter:
     3300016: "T\xFCr_5"
     3300018: "T\xFCr_6"
     3300020: WC
+    3300022: "T\xFCren_1"
+    3300024: WC_1
+    3300026: "W\xFCrfel"
+    3300028: "W\xFCrfel_1"
+    3300030: "W\xFCrfel_2"
+    3300032: "W\xFCrfel_3"
+    3300034: "W\xFCrfel_4"
     4300000: "T\xFCr_5"
     4300002: "T\xFCr_4"
     4300004: "T\xFCr_3"
@@ -68,6 +96,13 @@ ModelImporter:
     4300016: Kommode
     4300018: Flur
     4300020: WC
+    4300022: "W\xFCrfel_4"
+    4300024: "W\xFCrfel_3"
+    4300026: "W\xFCrfel_2"
+    4300028: "W\xFCrfel_1"
+    4300030: "W\xFCrfel"
+    4300032: "T\xFCren_1"
+    4300034: WC_1
     6400000: Flur
     6400002: Kommode
     6400004: Tisch
@@ -79,6 +114,13 @@ ModelImporter:
     6400016: "T\xFCr_5"
     6400018: "T\xFCr_6"
     6400020: WC
+    6400022: "T\xFCren_1"
+    6400024: WC_1
+    6400026: "W\xFCrfel"
+    6400028: "W\xFCrfel_1"
+    6400030: "W\xFCrfel_2"
+    6400032: "W\xFCrfel_3"
+    6400034: "W\xFCrfel_4"
     9500000: //RootNode
   materials:
     importMaterials: 1

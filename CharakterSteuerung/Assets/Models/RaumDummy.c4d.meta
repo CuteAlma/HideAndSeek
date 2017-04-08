@@ -4,7 +4,17 @@ timeCreated: 1491558164
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    100000: CINEMA_4D_Editor
+    100002: //RootNode
+    100004: "W\xFCrfel_4"
+    400000: CINEMA_4D_Editor
+    400002: //RootNode
+    400004: "W\xFCrfel_4"
+    2300000: "W\xFCrfel_4"
+    3300000: "W\xFCrfel_4"
+    4300000: "W\xFCrfel_4"
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
