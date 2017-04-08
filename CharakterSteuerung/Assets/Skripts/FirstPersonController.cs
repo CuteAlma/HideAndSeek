@@ -20,7 +20,7 @@ public class FirstPersonController : MonoBehaviour {
         float siderotate = Input.GetAxis("Mouse X") * mousespeed;
         verticalRotation -= Input.GetAxis("Mouse Y") * mousespeed;
 
-        float currentupdown = Camera.main.transform.rotation.eulerAngles.x;
+        //float currentupdown = Camera.main.transform.rotation.eulerAngles.x;
 
         verticalRotation = Mathf.Clamp(verticalRotation, -updownRange, updownRange);
         //Blickrichtung nach oben und unten wird nur durch neigung der Camera relaisiert

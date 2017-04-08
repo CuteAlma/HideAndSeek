@@ -1,0 +1,150 @@
+fileFormatVersion: 2
+guid: 17ae011f7bbdc4745b696abc7559c3ce
+timeCreated: 1491558163
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Beistelltisch
+    100004: Buecherregal_1
+    100006: Buecherregal_2
+    100008: Buecherregal_3
+    100010: CINEMA_4D_Editor
+    100012: "Gro\xDFerSchrank"
+    100014: Schreibtisch
+    100016: Schreibtischstuhl
+    100018: Sessel_1
+    100020: Sessel_2
+    100022: Teppich
+    100024: "W\xFCrfel_4"
+    100026: "M\xF6bel"
+    400000: //RootNode
+    400002: Beistelltisch
+    400004: Buecherregal_1
+    400006: Buecherregal_2
+    400008: Buecherregal_3
+    400010: CINEMA_4D_Editor
+    400012: "Gro\xDFerSchrank"
+    400014: Schreibtisch
+    400016: Schreibtischstuhl
+    400018: Sessel_1
+    400020: Sessel_2
+    400022: Teppich
+    400024: "W\xFCrfel_4"
+    400026: "M\xF6bel"
+    2300000: Beistelltisch
+    2300002: Buecherregal_1
+    2300004: Buecherregal_2
+    2300006: Buecherregal_3
+    2300008: "Gro\xDFerSchrank"
+    2300010: Schreibtisch
+    2300012: Schreibtischstuhl
+    2300014: Sessel_1
+    2300016: Sessel_2
+    2300018: Teppich
+    2300020: "W\xFCrfel_4"
+    3300000: Beistelltisch
+    3300002: Buecherregal_1
+    3300004: Buecherregal_2
+    3300006: Buecherregal_3
+    3300008: "Gro\xDFerSchrank"
+    3300010: Schreibtisch
+    3300012: Schreibtischstuhl
+    3300014: Sessel_1
+    3300016: Sessel_2
+    3300018: Teppich
+    3300020: "W\xFCrfel_4"
+    4300000: Buecherregal_3
+    4300002: Teppich
+    4300004: Beistelltisch
+    4300006: Sessel_1
+    4300008: Sessel_2
+    4300010: "Gro\xDFerSchrank"
+    4300012: Buecherregal_1
+    4300014: Schreibtischstuhl
+    4300016: Buecherregal_2
+    4300018: Schreibtisch
+    4300020: "W\xFCrfel_4"
+    6400000: Beistelltisch
+    6400002: Buecherregal_1
+    6400004: Buecherregal_2
+    6400006: Buecherregal_3
+    6400008: "Gro\xDFerSchrank"
+    6400010: Schreibtisch
+    6400012: Schreibtischstuhl
+    6400014: Sessel_1
+    6400016: Sessel_2
+    6400018: Teppich
+    6400020: "W\xFCrfel_4"
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
