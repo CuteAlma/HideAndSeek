@@ -8,8 +8,9 @@ public class LevelGenerator : MonoBehaviour {
     public GameObject[] spawnpoints = new GameObject[6];
 	// Use this for initialization
 	void Start () {
-        Shuffle(rooms);
-        Shuffle(spawnpoints);
+        System.Random rnd = new System.Random();
+        Shuffle(rooms, rnd);
+        Shuffle(spawnpoints, rnd);
         Place();
 	}
 	
@@ -26,9 +27,8 @@ public class LevelGenerator : MonoBehaviour {
         }
     }
 
-    public static void Shuffle(GameObject[] list)
+    public static void Shuffle(GameObject[] list, System.Random rnd)
     {
-        System.Random rnd = new System.Random();
         for (int i = 0; i < list.Length; i++)
         {
             int rand = rnd.Next(i, list.Length);
