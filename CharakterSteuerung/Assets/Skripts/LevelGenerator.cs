@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +8,10 @@ using UnityEngine;
     public GameObject[] spawnpoints = new GameObject[6];
 	// Use this for initialization
 	void Start () {
-		
+        System.Random rnd = new System.Random();
+        Shuffle(rooms, rnd);
+        Shuffle(spawnpoints, rnd);
+        Place();
 	}
 	
 	// Update is called once per frame
@@ -15,13 +19,24 @@ using UnityEngine;
 		
 	}
 
-    public static void Shuffle<T>(GameObject[] list, Random rnd)
+    private void Place()
     {
-        for (int i = 0; i < list.Length; i++)
-            Swap(list,i, rnd.Next(i, list.Length));
+        for(int s = 0; s< spawnpoints.Length; s++)
+        {
+            Instantiate(rooms[s], spawnpoints[s].transform.position, spawnpoints[s].transform.rotation);
+        }
     }
 
-    public static void Swap<T>(GameObject[] list, int i, int j)
+    public static void Shuffle(GameObject[] list, System.Random rnd)
+    {
+        for (int i = 0; i < list.Length; i++)
+        {
+            int rand = rnd.Next(i, list.Length);
+            Swap(list, i, rand);
+        }         
+    }
+
+    public static void Swap(GameObject[] list, int i, int j)
     {
         var temp = list[i];
         list[i] = list[j];
