@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelGenerator : MonoBehaviour {
+/*public class LevelGenerator : MonoBehaviour {
     public GameObject[] rooms = new GameObject[6];
     public GameObject[] spawnpoints = new GameObject[6];
 	// Use this for initialization
@@ -27,4 +27,4 @@ public class LevelGenerator : MonoBehaviour {
         list[i] = list[j];
         list[j] = temp;
     }
-}
+}*/
