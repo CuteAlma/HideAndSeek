@@ -51,6 +51,8 @@
      <Compile Include="Assets\Skripts\FirstPersonController.cs" />
      <Compile Include="Assets\Skripts\LevelGenerator.cs" />
      <Compile Include="Assets\Skripts\ObjectSpawner.cs" />
+     <Compile Include="Assets\Skripts\Pickupable.cs" />
+     <Compile Include="Assets\Skripts\TakeObject.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
