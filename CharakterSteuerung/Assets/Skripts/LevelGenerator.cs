@@ -7,6 +7,7 @@ public class LevelGenerator : MonoBehaviour {
     public GameObject[] rooms = new GameObject[6];
     public GameObject[] roomspawnpoints = new GameObject[6];
     public GameObject[] objects = new GameObject[4];
+    public static GameObject searchedobj;
     // Use this for initialization
     void Start () {
         System.Random rnd = new System.Random();
@@ -22,9 +23,14 @@ public class LevelGenerator : MonoBehaviour {
         objectspawnpoints[4] = GameObject.Find("ObjectSpawn_Kinderzimmer");
         objectspawnpoints[5] = GameObject.Find("ObjectSpawn_Esszimmer");
 
+        
+
         Shuffle(objects, rnd);
         Shuffle(objectspawnpoints, rnd);
         Place(objects, objectspawnpoints);
+        Shuffle(objects, rnd);
+        searchedobj = objects[0];
+        Instantiate(searchedobj, GameObject.Find("SearchedObjectSpawn").transform.position, GameObject.Find("SearchedObjectSpawn").transform.rotation);
     }
 	
 	// Update is called once per frame
