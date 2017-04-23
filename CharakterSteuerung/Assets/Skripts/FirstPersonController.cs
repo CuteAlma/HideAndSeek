@@ -8,11 +8,16 @@ public class FirstPersonController : MonoBehaviour {
     public float updownRange = 40.0f;
     float verticalRotation = 0;
 
-	// Use this for initialization
-	void Start () {
+    public LayerMask playerLayer;
+    public LayerMask safeZoneLayer;
+    public GameObject girl;
+
+    // Use this for initialization
+    void Start () {
         Screen.lockCursor = (true);
-	
-	}
+        
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -38,6 +43,27 @@ public class FirstPersonController : MonoBehaviour {
         speed = transform.rotation * speed; //Vector an Playerachsen ausrichten
         CharacterController cc = GetComponent<CharacterController>();
         cc.SimpleMove(speed);
-	
-	}
+
+        //Physics.IgnoreLayerCollision(8, 11, true);
+
+    }
+
+    void OnTriggerEnter(Collider c)
+    {
+        if (c.gameObject.name == "SafeZone")
+        {
+            Debug.Log("Player ENTERED Trigger");
+            AI SN = girl.GetComponent<AI>();
+            SN.safeZoneEntered = true;
+        }
+        else
+            Debug.Log("Something else triggered");
+    }
+
+    void OnTriggerExit(Collider c)
+    {
+        Debug.Log("Player LEFT Trigger");
+        AI SN = girl.GetComponent<AI>();
+        SN.safeZoneEntered = false;
+    }
 }

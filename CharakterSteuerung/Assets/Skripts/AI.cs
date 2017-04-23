@@ -7,6 +7,8 @@ public class AI : MonoBehaviour {
     public Transform eyes;
     public LayerMask playerLayer;
     public LayerMask obstacleLayer;
+    public LayerMask safeZoneLayer;
+    public GameObject dir;
 
     public float sight = 10f;
     public float chasingSpeed = 0.2f;
@@ -17,6 +19,7 @@ public class AI : MonoBehaviour {
     bool gameStart = false;
     bool gameOver = false;
     bool wait = true;
+    public bool safeZoneEntered = false;
 
     Animator anim;
     AudioSource audio;
@@ -46,17 +49,26 @@ public class AI : MonoBehaviour {
 
             if (!agent.pathPending)
             {
+                
                 if (agent.remainingDistance <= agent.stoppingDistance)
                 {
                     if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
                     {
+                        
                         getNewDestination();
+                        
+                        agent.SetDestination(destination);
                     }
                 }
             }
-
             if (Physics.Raycast(eyes.position, direction, out hit, sight, obstacleLayer.value))
             {
+                Debug.logger.Log("Red RAY");
+                Debug.DrawRay(eyes.position, direction * sight, Color.red);
+            }
+            else if(safeZoneEntered == true && Physics.Raycast(eyes.position, direction, out hit, sight, safeZoneLayer.value))
+            {
+                Debug.logger.Log("Red RAY SAFE ZONE");
                 Debug.DrawRay(eyes.position, direction * sight, Color.red);
             }
             else
@@ -64,6 +76,7 @@ public class AI : MonoBehaviour {
                 RaycastHit hit2;
                 if (Physics.Raycast(eyes.position, direction, out hit2, sight, playerLayer.value))
                 {
+                    Debug.logger.Log("Green RAY");
                     audio.PlayOneShot(gameOverSound, 5f);
                     Debug.DrawRay(eyes.position, direction * sight, Color.green);
                     anim.SetFloat("gameOver", 0.2f);
@@ -101,25 +114,32 @@ public class AI : MonoBehaviour {
         yield return new WaitForSeconds(4.3f);
         Debug.logger.Log("End Animation");
         wait = false;
+        transform.rotation = Quaternion.AngleAxis(180, transform.up) * transform.rotation;
         anim.SetFloat("searching", 0.00001f);
+        //destination = GameObject.Find("dir").transform.position;
+        Vector3 backward = -eyes.forward;
+        destination = transform.position - (backward * Random.Range(20.0f, 40.0f));
+        agent.SetDestination(destination);
+
     }
 
     void getNewDestination()
     {
+        Debug.logger.Log("getNewDestination");
         radius = GetRandomNumber();
         Vector3 randomDirection = Random.insideUnitSphere * radius;
         randomDirection += transform.position;
         UnityEngine.AI.NavMeshHit hit;
         UnityEngine.AI.NavMesh.SamplePosition(randomDirection, out hit, radius, 1);
         destination = hit.position;
-
-        agent.SetDestination(destination);
+        
+        //agent.SetDestination(destination);
 
     }
 
     public float GetRandomNumber()
     {
-        return Random.Range(1.0f, 40.0f);
+        return Random.Range(10.0f, 50.0f);
     }
 
 
@@ -128,6 +148,7 @@ public class AI : MonoBehaviour {
         if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0)
         {
             getNewDestination();
+            agent.SetDestination(destination);
             anim.SetFloat("startGame", 1f);
             gameStart = true;
             wait = false;
@@ -142,10 +163,12 @@ public class AI : MonoBehaviour {
             Debug.logger.Log("COLLISION DETECTED");
             agent.ResetPath();
             wait = true;
+            //transform.rotation = Quaternion.AngleAxis(180, transform.up) * transform.rotation;
             anim.SetFloat("searching", 0.2f);
             StartCoroutine("CoRoutineWaitForAnimationEnd");
             
         }
+
     }
 
 
