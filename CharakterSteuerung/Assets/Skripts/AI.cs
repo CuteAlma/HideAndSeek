@@ -13,61 +13,90 @@ public class AI : MonoBehaviour {
     Animator anim;
     bool gameStart = false;
     bool gameOver = false;
-    public GameObject girl;
+    AudioSource audio;
+    public AudioClip gameOverSound;
+
 
 
     void Start () {
         anim = GetComponent<Animator>();
+        audio = GetComponent<AudioSource>();
     }
 
     void Update () {
+        Vector3 direction = target.position - eyes.position;
+        direction.y = 0;
+        var rotation = Quaternion.LookRotation(direction);
         if (gameStart == false)
         {
-            if (Input.GetAxis("Vertical") != 0){
-                anim.SetFloat("startGame", Input.GetAxis("Vertical"));
-                gameStart = true;
-            }else if (Input.GetAxis("Horizontal") != 0){
-                anim.SetFloat("startGame", Input.GetAxis("Horizontal"));
-                gameStart = true;
-            }
+            wakeUPGirl();
         }
-
-
-        Vector3 direction = (target.position - eyes.position).normalized;
-        direction.y = 0;
+        
         RaycastHit hit;
-        //Debug.DrawRay(eyes.position, direction * sight);
-        if(Physics.Raycast(eyes.position, direction, out hit, sight, obstacleLayer.value)){
-            Debug.DrawRay(eyes.position, direction * sight, Color.red);
-        }
-        else{
-            RaycastHit hit2;
-            if(Physics.Raycast(eyes.position, direction, out hit2, sight, playerLayer.value))
+        if (gameOver == false)
+        {
+            
+            if (Physics.Raycast(eyes.position, direction, out hit, sight, obstacleLayer.value))
             {
-                Debug.DrawRay(eyes.position, direction * sight, Color.green);
-                transform.root.LookAt(target);
-                if (gameOver == false)
+                Debug.DrawRay(eyes.position, direction * sight, Color.red);
+            }
+            else
+            {
+                RaycastHit hit2;
+                if (Physics.Raycast(eyes.position, direction, out hit2, sight, playerLayer.value))
                 {
-                    if (Vector3.Distance(transform.root.position, target.position) > reachedTarget)
-                    {
-                        // transform.root.position += transform.root.forward * chasingSpeed;
-                        girl.GetComponent<Rigidbody>().velocity = Vector3.zero;
-                        girl.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-                        girl.GetComponent<Rigidbody>().isKinematic = true;
-                        girl.isStatic = true;
-                        gameOver = true;
-                        anim.SetFloat("gameOver", 0.2f);
-                    }
-                    else
-                    {
-                        //anim.SetFloat("gameOver", 0.2f);
-
-                    }
+                    audio.PlayOneShot(gameOverSound, 5f);
+                    Debug.DrawRay(eyes.position, direction * sight, Color.green);
+                    anim.SetFloat("gameOver", 0.2f);
+                    Debug.logger.Log("GAME OVER");
+                    StartCoroutine("CoRoutineWaitForAnimationEnd");
+                    gameOver = true;
+                    
                 }
             }
         }
+        else
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 4f);
+            /*if (Vector3.Distance(transform.root.position, target.position) > reachedTarget)
+            {
+                transform.root.position += transform.root.forward * chasingSpeed;
+
+            }*/
+
+        }
+        
 	}
 
+    IEnumerator CoRoutineWaitForAnimationEnd()
+    {
+        Debug.logger.Log("Begin");
+        yield return new WaitForSeconds(0.5f);
+        Debug.logger.Log("End");
+        Time.timeScale = 0;
+    }
 
-    
+
+    void wakeUPGirl()
+    {
+        if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0)
+        {
+            anim.SetFloat("startGame", 1f);
+            gameStart = true;
+        }
+        
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if(col.gameObject.layer == 10)
+        {
+            Debug.logger.Log("COLLISION DETECTED");
+            anim.SetFloat("gameOver", 0.2f);
+        }
+    }
+
+
+
 }
+
