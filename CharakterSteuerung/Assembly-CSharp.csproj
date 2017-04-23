@@ -46,7 +46,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AI.cs" />
+     <Compile Include="Assets\Skripts\AI.cs" />
+     <Compile Include="Assets\Skripts\AI_AnimationPlayer.cs" />
      <Compile Include="Assets\Skripts\BasicAI.cs" />
      <Compile Include="Assets\Skripts\FirstPersonController.cs" />
      <Compile Include="Assets\Skripts\LevelGenerator.cs" />
