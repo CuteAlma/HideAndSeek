@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TakeObject : MonoBehaviour {
 
     public int distance;
+    public Text text;
+    public bool gameEnd = false;
 	// Use this for initialization
 	void Start () {
 		
@@ -14,35 +18,43 @@ public class TakeObject : MonoBehaviour {
 	void Update () {
         if (Input.GetMouseButtonUp(1))//("Action")
         {
-            Debug.Log("Button pressed");
-            int x = Screen.width / 2;
-            int y = Screen.height / 2;
+                Debug.Log("Button pressed");
+                int x = Screen.width / 2;
+                int y = Screen.height / 2;
 
-            Ray ray = Camera.main.ScreenPointToRay(new Vector3(x, y));
-            RaycastHit hit;
-            if(Physics.Raycast(ray, out hit, distance))
-            {
-                Debug.Log(hit.collider.name);
-                Pickupable p = hit.collider.GetComponent<Pickupable>();
-                Debug.Log("Item hit");
-                if (p != null)
+                Ray ray = Camera.main.ScreenPointToRay(new Vector3(x, y));
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit, distance))
                 {
-                    Debug.Log("wuerfel hit");
-                    Destroy(hit.collider.gameObject);
-                    Debug.Log("Parent: " + p.transform.parent.gameObject.tag);
-                    Debug.Log("SearchedObj: " + LevelGenerator.searchedobj.tag);
-                    if (p.transform.parent.gameObject.tag == LevelGenerator.searchedobj.tag)
+                    Debug.Log(hit.collider.name);
+                    Pickupable p = hit.collider.GetComponent<Pickupable>();
+                    if (p != null)
                     {
-                        Debug.Log("Gewonnen");
-                    } else
-                    {
-                        Debug.Log("Verloren");
+                        Destroy(hit.collider.gameObject);
+                        if (p.transform.parent.gameObject.tag == LevelGenerator.searchedobj.tag)
+                        {
+                            text.text = "Gewonnen";
+                            gameEnd = true;
+                            StartCoroutine("CoRoutineGameOver");
+                        }
+                        else
+                        {
+                            text.text = "Verloren";
+                            gameEnd = true;
+                            StartCoroutine("CoRoutineGameOver");
+                        }
                     }
-                    //p.gameObject.SetActive(false);
-                    //Event einbauen, ->textausgabe
                 }
-            }
+            
         }
 
+    }
+
+    IEnumerator CoRoutineGameOver()
+    {
+        Debug.logger.Log("Begin GameOver");
+        yield return new WaitForSeconds(0.5f);
+        Debug.logger.Log("End GameOver");
+        Time.timeScale = 0;
     }
 }
